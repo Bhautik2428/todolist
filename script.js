@@ -37,10 +37,10 @@ function showTodo(filter) {
             }
         });
     }
-    taskBox.innerHTML = liTag || `<span style="padding: 72.5px;">You don't have any task here</span>`;
+    taskBox.innerHTML = liTag || `<span>You don't have any task here</span>`;
     let checkTask = taskBox.querySelectorAll(".task");
     !checkTask.length ? clearAll.classList.remove("active") : clearAll.classList.add("active");
-    // taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
+    taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
 }
 showTodo("all");
 
